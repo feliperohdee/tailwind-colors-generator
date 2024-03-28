@@ -53,7 +53,7 @@ const findClosestColor = targetColor => {
 	return closestColor;
 };
 
-module.exports = hex => {
+const generate = hex => {
 	const color = chroma(hex);
 	const closestColor = findClosestColor(hex);
 	const closestShade = chroma(closestColor.closestShadeLightness.hexcode);
@@ -91,3 +91,7 @@ module.exports = hex => {
 		}
 	});
 };
+
+generate.findClosestColor = findClosestColor;
+
+module.exports = generate;
