@@ -16,7 +16,17 @@ The `generate` function is a color generator. The input of the function is a hex
 
 ## How to Use
 
-Here's a sample usage:
+The `generate` function is primarily used to generate an extensive list of attributes and combinations for a given color. Supporting helper functions are also included to retrieve colors by their properties or manipulate them accordingly.
+
+### `generate()`
+
+Generates a complete color object based on the provided color.
+
+Parameters:
+
+- **color** - String (hex, hsl, or rgb formatted color)
+
+Returns a detailed color object containing hexadecimal, RGB and HSL representations of that color alongside other important properties such as shades and luminance.
 
 ```javascript
 const assert = require('assert');
@@ -140,4 +150,53 @@ In this example, the `generate` function is used with '#d7006c' as input. The fu
 	}
 }
 ```
+
+### `generate.hexByNumber()`
+
+Retrieves the hex value of a color based on a number identifier within an input color object.
+
+Parameters:
+
+- **number** - Numerical identifier for the desired shade
+- **input** - Color object generated using `generate()`
+
+Returns a matching hexadecimal color string if found, or 0 otherwise.
+
+### `generate.hexByLuminance()`
+
+Retrieves the hex value of a shade within an input color object with a matched luminance.
+
+Parameters:
+
+- **luminance** - Luminance level (ranging from 0 to 100)
+- **input** - Color object generated using `generate()`
+
+Returns an array of hexadecimal color strings representing shades with matching luminance levels.
+
+### `generate.textColor()`
+
+Determines the most readable text color given a background color.
+
+Parameters:
+
+- **color** - Background color's hex/rgb/hsl values
+- **lightColor** - A light color's hex/rgb/hsl values typically white
+- **darkColor** - A dark color's hex/rgb/hsl values typically black
+
+Returns an object that includes the best text color in hex, hsl, rgb and the type (light/dark).
+
+### `generate.closestColor()`
+
+Finds the closest matching color from a list of colors.
+
+Parameters:
+
+- **color** - String (hex, hsl or rgb formatted color)
+- **colors** - Array of color objects for comparison
+
+Returns an object containing the closest color's identifier and respective distances.
+
+## Contributing 
+
+Bug reports and pull requests are welcome. This project aims to foster an environment for collaboration and contributors are expected to adhere to the code of conduct.
 
