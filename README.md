@@ -340,8 +340,7 @@ Finds the closest matching color from a list of colors.
 
 Parameters:
 
-- **color** - String (hex, hsl or rgb formatted color)
-- **colors** - Array of color objects for comparison
+- **hex** - String (hex formatted color)
 
 Returns an object containing the closest color's identifier and respective distances.
 

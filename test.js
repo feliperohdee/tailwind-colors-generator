@@ -8,8 +8,10 @@ const hex = '#d7006c';
 const rgb = 'rgb(215, 0, 108)';
 const hsl = 'hsl(329.86, 100%, 42.16%)';
 const expected = {
+	closest: 'pink',
     combinations: {
         analogous: [{
+			closest: 'fuchsia',
             hex: '#d700d7',
             hsl: [300, 1, 0.4215686274509804, 1],
             luminance: 0.1935336953515051,
@@ -21,6 +23,7 @@ const expected = {
 				type: 'light'
             }
         }, {
+			closest: 'red',
             hex: '#d70000',
             hsl: [0, 1, 0.4215686274509804, 1],
             luminance: 0.14447072904399574,
@@ -33,6 +36,7 @@ const expected = {
             }
         }],
         complementary: [{
+			closest: 'green',
             hex: '#00d76b',
             hsl: [149.86046511627907, 1, 0.4215686274509804, 1],
             luminance: 0.496624142922715,
@@ -45,6 +49,7 @@ const expected = {
             }
         }],
         split: [{
+			closest: 'lime',
             hex: '#00d700',
             hsl: [120, 1, 0.4215686274509804, 1],
             luminance: 0.4860087742815887,
@@ -56,6 +61,7 @@ const expected = {
 				type: 'dark'
             }
         }, {
+			closest: 'teal',
             hex: '#00d7d7',
             hsl: [180, 1, 0.4215686274509804, 1],
             luminance: 0.535071740589098,
@@ -68,6 +74,7 @@ const expected = {
             }
         }],
         tetradic: [{
+			closest: 'yellow',
             hex: '#d7d700',
             hsl: [60, 1, 0.4215686274509804, 1],
             luminance: 0.6304795033255844,
@@ -79,6 +86,7 @@ const expected = {
 				type: 'dark'
             }
         }, {
+			closest: 'green',
             hex: '#00d76b',
             hsl: [149.86046511627907, 1, 0.4215686274509804, 1],
             luminance: 0.496624142922715,
@@ -90,6 +98,7 @@ const expected = {
 				type: 'dark'
             }
         }, {
+			closest: 'violet',
             hex: '#0000d7',
             hsl: [240, 1, 0.4215686274509804, 1],
             luminance: 0.04906296630750938,
@@ -102,6 +111,7 @@ const expected = {
             }
         }],
         triadic: [{
+			closest: 'lime',
             hex: '#6cd700',
             hsl: [89.86046511627907, 1, 0.4215686274509804, 1],
             luminance: 0.517890225595324,
@@ -113,6 +123,7 @@ const expected = {
 				type: 'dark'
             }
         }, {
+			closest: 'blue',
             hex: '#006cd7',
             hsl: [209.86046511627907, 1, 0.4215686274509804, 1],
             luminance: 0.15631420798005663,

@@ -13,7 +13,7 @@ const fixHsl = hsl => {
 	});
 };
 
-const findClosestColor = targetColor => {
+const findClosestColor = hex => {
     let colors = referenceColorFamilies;
 
     colors = colors.map(color => {
@@ -22,7 +22,7 @@ const findClosestColor = targetColor => {
             shades: color.shades.map(shade => {
                 return {
                     ...shade,
-                    delta: chroma.deltaE(targetColor, shade.hex)
+                    delta: chroma.deltaE(hex, shade.hex)
                 };
             })
         };
@@ -51,7 +51,7 @@ const findClosestColor = targetColor => {
         return {
             ...shade,
             lightnessDiff: Math.abs(
-                chroma(shade.hex).get('hsl.l') - chroma(targetColor).get('hsl.l')
+                chroma(shade.hex).get('hsl.l') - chroma(hex).get('hsl.l')
             )
         };
     });
@@ -106,13 +106,15 @@ const combinations = (color, hue, opts = {
 
 	const combination = hue => {
 		const newColor = color.set('hsl.h', hue);
-	
 		const hex = newColor.hex();
 		const hsl = fixHsl(newColor.hsl());
 		const luminance = newColor.luminance();
 		const rgb = newColor.rgb();
 		const text = textColor(hex);
+		const closestColor = findClosestColor(hex);
+
 		const result = {
+			closest: closestColor.id,
 			hex,
 			hsl,
 			luminance,
@@ -121,7 +123,7 @@ const combinations = (color, hue, opts = {
 		};
 	
 		if (opts?.shades) {
-			result.shades = shades(hex, hsl, luminance, rgb);
+			result.shades = shades(closestColor, hex, hsl, luminance, rgb);
 		}
 
 		return result;
@@ -136,8 +138,7 @@ const combinations = (color, hue, opts = {
 	};
 };
 
-const shades = (hex, hsl, luminance, rgb) => {
-	const closestColor = findClosestColor(hex);
+const shades = (closestColor, hex, hsl, luminance, rgb) => {
     const [
 		closestShadeH,
 		closestShadeS
@@ -194,8 +195,10 @@ const generate = (src, opts = {
 	const [h, s, l] = fixHsl(color.hsl());
 	const luminance = color.luminance();
 	const rgb = color.rgb();
+	const closestColor = findClosestColor(hex);
 
     return {
+		closest: closestColor.id,
         combinations: combinations(color, h, {
 			shades: opts.combinationsShades
 		}),
@@ -203,12 +206,7 @@ const generate = (src, opts = {
 		hsl: [h, s, l],
         luminance: color.luminance(),
 		rgb,
-        shades: shades(
-			hex,
-			[h, s, l],
-			luminance,
-			rgb
-		),
+        shades: shades(closestColor, hex, [h, s, l], luminance, rgb),
 		text: textColor(hex)
     };
 };
