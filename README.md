@@ -29,19 +29,116 @@ console.log(shades);
 In this example, the `generate` function is used with '#d7006c' as input. The function returns the following output:
 
 ```json
-[
-	{ "hex": "#fff0f9", "number": 50, "self": false },
-	{ "hex": "#ffe4f5", "number": 100, "self": false },
-	{ "hex": "#ffc9ee", "number": 200, "self": false },
-	{ "hex": "#ff9cde", "number": 300, "self": false },
-	{ "hex": "#ff5fc5", "number": 400, "self": false },
-	{ "hex": "#ff30ab", "number": 500, "self": false },
-	{ "hex": "#f50d88", "number": 600, "self": false },
-	{ "hex": "#d7006c", "number": 700, "self": true },
-	{ "hex": "#b00458", "number": 800, "self": false },
-	{ "hex": "#92094c", "number": 900, "self": false },
-	{ "hex": "#5b002a", "number": 950, "self": false }
-]
+{
+	"combinations": {
+		"analogous": "[...]", // similar or related colors
+		"complementary": "[...]", // colors opposite on the color wheel
+		"split": "[...]", // colors that are similar distance apart on the color wheel
+		"tetradic": "[...]", // four colors at 90 degrees apart on the color wheel
+		"triadic": "[...]", // three colors at equal distances on the color wheel
+	},
+	"hex": "#d7006c",
+	"hsl": "[...]",
+	"luminance": 0.3,
+	"rgb": "[...]",
+	"shades": [
+		{
+			"hex": "#fff0f9",
+			"hsl": "[...]",
+			"luminance": 0.96,
+			"number": 50,
+			"rgb": "[...]",
+			"self": false,
+			"text":" {...}"
+		}, {
+			"hex": "#ffe4f5",
+			"hsl": "[...]",
+			"luminance": 0.96,
+			"number": 100,
+			"rgb": "[...]",
+			"self": false,
+			"text": "{...}"
+		}, {
+			"hex": "#ffc9ee",
+			"hsl": "[...]",
+			"luminance": 0.96,
+			"number": 200,
+			"rgb": "[...]",
+			"self": false,
+			"text": "{...}"
+		}, {
+			"hex": "#ff9cde",
+			"hsl": "[...]",
+			"luminance": 0.96,
+			"number": 300,
+			"rgb": "[...]",
+			"self": false,
+			"text": "{...}"
+		}, {
+			"hex": "#ff5fc5",
+			"hsl": "[...]",
+			"luminance": 0.96,
+			"number": 400,
+			"rgb": "[...]",
+			"self": false,
+			"text": "{...}"
+		}, {
+			"hex": "#ff30ab",
+			"hsl": "[...]",
+			"luminance": 0.96,
+			"number": 500,
+			"rgb": "[...]",
+			"self": false,
+			"text": "{...}"
+		}, {
+			"hex": "#f50d88",
+			"hsl": "[...]",
+			"luminance": 0.96,
+			"number": 600,
+			"rgb": "[...]",
+			"self": false,
+			"text": "{...}"
+		}, {
+			"hex": "#d7006c",
+			"hsl": "[...]",
+			"luminance": 0.96,
+			"number": 700,
+			"rgb": "[...]",
+			"self": true,
+			"text": "{...}"
+		}, {
+			"hex": "#b00458",
+			"hsl": "[...]",
+			"luminance": 0.96,
+			"number": 800,
+			"rgb": "[...]",
+			"self": false,
+			"text": "{...}"
+		}, {
+			"hex": "#92094c",
+			"hsl": "[...]",
+			"luminance": 0.96,
+			"number": 900,
+			"rgb": "[...]",
+			"self": false,
+			"text": "{...}"
+		}, {
+			"hex": "#5b002a",
+			"hsl": "[...]",
+			"luminance": 0.96,
+			"number": 950,
+			"rgb": "[...]",
+			"self": false,
+			"text": "{...}"
+		}
+	],
+	"text": {
+		"hex": "#fff",
+		"hsl": "[...]",
+		"rgb": "[...]",
+		"type": "light"
+	}
+}
 ```
 
 It's an array of objects. Each object represents a shade of the color '#d7006c'. The `self` key is `true` only for the original input color shade.
