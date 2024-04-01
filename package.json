@@ -1,12 +1,16 @@
 {
     "name": "tailwind-colors-generator",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "main": "index.js",
     "license": "MIT",
-	"scripts": {
-		"test": "node ./test"
-	},
+    "scripts": {
+		"lint": "eslint .",
+        "test": "node ./test"
+    },
     "dependencies": {
         "chroma-js": "^2.4.2"
+    },
+    "devDependencies": {
+        "eslint": "^8.57.0"
     }
 }

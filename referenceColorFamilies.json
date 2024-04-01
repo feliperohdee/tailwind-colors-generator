@@ -3,628 +3,628 @@
     "id": "red",
     "shades": [{
         "number": 50,
-        "hexcode": "#fef2f2"
+        "hex": "#fef2f2"
     }, {
         "number": 100,
-        "hexcode": "#fee2e2"
+        "hex": "#fee2e2"
     }, {
         "number": 200,
-        "hexcode": "#fecaca"
+        "hex": "#fecaca"
     }, {
         "number": 300,
-        "hexcode": "#fca5a5"
+        "hex": "#fca5a5"
     }, {
         "number": 400,
-        "hexcode": "#f87171"
+        "hex": "#f87171"
     }, {
         "number": 500,
-        "hexcode": "#ef4444"
+        "hex": "#ef4444"
     }, {
         "number": 600,
-        "hexcode": "#dc2626"
+        "hex": "#dc2626"
     }, {
         "number": 700,
-        "hexcode": "#b91c1c"
+        "hex": "#b91c1c"
     }, {
         "number": 800,
-        "hexcode": "#991b1b"
+        "hex": "#991b1b"
     }, {
         "number": 900,
-        "hexcode": "#7f1d1d"
+        "hex": "#7f1d1d"
     }, {
         "number": 950,
-        "hexcode": "#450a0a"
+        "hex": "#450a0a"
     }]
 }, {
     "name": "Orange",
     "id": "orange",
     "shades": [{
         "number": 50,
-        "hexcode": "#fff7ed"
+        "hex": "#fff7ed"
     }, {
         "number": 100,
-        "hexcode": "#ffedd5"
+        "hex": "#ffedd5"
     }, {
         "number": 200,
-        "hexcode": "#fed7aa"
+        "hex": "#fed7aa"
     }, {
         "number": 300,
-        "hexcode": "#fdba74"
+        "hex": "#fdba74"
     }, {
         "number": 400,
-        "hexcode": "#fb923c"
+        "hex": "#fb923c"
     }, {
         "number": 500,
-        "hexcode": "#f97316"
+        "hex": "#f97316"
     }, {
         "number": 600,
-        "hexcode": "#ea580c"
+        "hex": "#ea580c"
     }, {
         "number": 700,
-        "hexcode": "#c2410c"
+        "hex": "#c2410c"
     }, {
         "number": 800,
-        "hexcode": "#9a3412"
+        "hex": "#9a3412"
     }, {
         "number": 900,
-        "hexcode": "#7c2d12"
+        "hex": "#7c2d12"
     }, {
         "number": 950,
-        "hexcode": "#431407"
+        "hex": "#431407"
     }]
 }, {
     "name": "Amber",
     "id": "amber",
     "shades": [{
         "number": 50,
-        "hexcode": "#fffbeb"
+        "hex": "#fffbeb"
     }, {
         "number": 100,
-        "hexcode": "#fef3c7"
+        "hex": "#fef3c7"
     }, {
         "number": 200,
-        "hexcode": "#fde68a"
+        "hex": "#fde68a"
     }, {
         "number": 300,
-        "hexcode": "#fcd34d"
+        "hex": "#fcd34d"
     }, {
         "number": 400,
-        "hexcode": "#fbbf24"
+        "hex": "#fbbf24"
     }, {
         "number": 500,
-        "hexcode": "#f59e0b"
+        "hex": "#f59e0b"
     }, {
         "number": 600,
-        "hexcode": "#d97706"
+        "hex": "#d97706"
     }, {
         "number": 700,
-        "hexcode": "#b45309"
+        "hex": "#b45309"
     }, {
         "number": 800,
-        "hexcode": "#92400e"
+        "hex": "#92400e"
     }, {
         "number": 900,
-        "hexcode": "#78350f"
+        "hex": "#78350f"
     }, {
         "number": 950,
-        "hexcode": "#451a03"
+        "hex": "#451a03"
     }]
 }, {
     "name": "Yellow",
     "id": "yellow",
     "shades": [{
         "number": 50,
-        "hexcode": "#fefce8"
+        "hex": "#fefce8"
     }, {
         "number": 100,
-        "hexcode": "#fef9c3"
+        "hex": "#fef9c3"
     }, {
         "number": 200,
-        "hexcode": "#fef08a"
+        "hex": "#fef08a"
     }, {
         "number": 300,
-        "hexcode": "#fde047"
+        "hex": "#fde047"
     }, {
         "number": 400,
-        "hexcode": "#facc15"
+        "hex": "#facc15"
     }, {
         "number": 500,
-        "hexcode": "#eab308"
+        "hex": "#eab308"
     }, {
         "number": 600,
-        "hexcode": "#ca8a04"
+        "hex": "#ca8a04"
     }, {
         "number": 700,
-        "hexcode": "#a16207"
+        "hex": "#a16207"
     }, {
         "number": 800,
-        "hexcode": "#854d0e"
+        "hex": "#854d0e"
     }, {
         "number": 900,
-        "hexcode": "#713f12"
+        "hex": "#713f12"
     }, {
         "number": 950,
-        "hexcode": "#422006"
+        "hex": "#422006"
     }]
 }, {
     "name": "Lime",
     "id": "lime",
     "shades": [{
         "number": 50,
-        "hexcode": "#f7fee7"
+        "hex": "#f7fee7"
     }, {
         "number": 100,
-        "hexcode": "#ecfccb"
+        "hex": "#ecfccb"
     }, {
         "number": 200,
-        "hexcode": "#d9f99d"
+        "hex": "#d9f99d"
     }, {
         "number": 300,
-        "hexcode": "#bef264"
+        "hex": "#bef264"
     }, {
         "number": 400,
-        "hexcode": "#a3e635"
+        "hex": "#a3e635"
     }, {
         "number": 500,
-        "hexcode": "#84cc16"
+        "hex": "#84cc16"
     }, {
         "number": 600,
-        "hexcode": "#65a30d"
+        "hex": "#65a30d"
     }, {
         "number": 700,
-        "hexcode": "#4d7c0f"
+        "hex": "#4d7c0f"
     }, {
         "number": 800,
-        "hexcode": "#3f6212"
+        "hex": "#3f6212"
     }, {
         "number": 900,
-        "hexcode": "#365314"
+        "hex": "#365314"
     }, {
         "number": 950,
-        "hexcode": "#1a2e05"
+        "hex": "#1a2e05"
     }]
 }, {
     "name": "Green",
     "id": "green",
     "shades": [{
         "number": 50,
-        "hexcode": "#f0fdf4"
+        "hex": "#f0fdf4"
     }, {
         "number": 100,
-        "hexcode": "#dcfce7"
+        "hex": "#dcfce7"
     }, {
         "number": 200,
-        "hexcode": "#bbf7d0"
+        "hex": "#bbf7d0"
     }, {
         "number": 300,
-        "hexcode": "#86efac"
+        "hex": "#86efac"
     }, {
         "number": 400,
-        "hexcode": "#4ade80"
+        "hex": "#4ade80"
     }, {
         "number": 500,
-        "hexcode": "#22c55e"
+        "hex": "#22c55e"
     }, {
         "number": 600,
-        "hexcode": "#16a34a"
+        "hex": "#16a34a"
     }, {
         "number": 700,
-        "hexcode": "#15803d"
+        "hex": "#15803d"
     }, {
         "number": 800,
-        "hexcode": "#166534"
+        "hex": "#166534"
     }, {
         "number": 900,
-        "hexcode": "#14532d"
+        "hex": "#14532d"
     }, {
         "number": 950,
-        "hexcode": "#052e16"
+        "hex": "#052e16"
     }]
 }, {
     "name": "Emerald",
     "id": "emerald",
     "shades": [{
         "number": 50,
-        "hexcode": "#ecfdf5"
+        "hex": "#ecfdf5"
     }, {
         "number": 100,
-        "hexcode": "#d1fae5"
+        "hex": "#d1fae5"
     }, {
         "number": 200,
-        "hexcode": "#a7f3d0"
+        "hex": "#a7f3d0"
     }, {
         "number": 300,
-        "hexcode": "#6ee7b7"
+        "hex": "#6ee7b7"
     }, {
         "number": 400,
-        "hexcode": "#34d399"
+        "hex": "#34d399"
     }, {
         "number": 500,
-        "hexcode": "#10b981"
+        "hex": "#10b981"
     }, {
         "number": 600,
-        "hexcode": "#059669"
+        "hex": "#059669"
     }, {
         "number": 700,
-        "hexcode": "#047857"
+        "hex": "#047857"
     }, {
         "number": 800,
-        "hexcode": "#065f46"
+        "hex": "#065f46"
     }, {
         "number": 900,
-        "hexcode": "#064e3b"
+        "hex": "#064e3b"
     }, {
         "number": 950,
-        "hexcode": "#022c22"
+        "hex": "#022c22"
     }]
 }, {
     "name": "Teal",
     "id": "teal",
     "shades": [{
         "number": 50,
-        "hexcode": "#f0fdfa"
+        "hex": "#f0fdfa"
     }, {
         "number": 100,
-        "hexcode": "#ccfbf1"
+        "hex": "#ccfbf1"
     }, {
         "number": 200,
-        "hexcode": "#99f6e4"
+        "hex": "#99f6e4"
     }, {
         "number": 300,
-        "hexcode": "#5eead4"
+        "hex": "#5eead4"
     }, {
         "number": 400,
-        "hexcode": "#2dd4bf"
+        "hex": "#2dd4bf"
     }, {
         "number": 500,
-        "hexcode": "#14b8a6"
+        "hex": "#14b8a6"
     }, {
         "number": 600,
-        "hexcode": "#0d9488"
+        "hex": "#0d9488"
     }, {
         "number": 700,
-        "hexcode": "#0f766e"
+        "hex": "#0f766e"
     }, {
         "number": 800,
-        "hexcode": "#115e59"
+        "hex": "#115e59"
     }, {
         "number": 900,
-        "hexcode": "#134e4a"
+        "hex": "#134e4a"
     }, {
         "number": 950,
-        "hexcode": "#042f2e"
+        "hex": "#042f2e"
     }]
 }, {
     "name": "Cyan",
     "id": "cyan",
     "shades": [{
         "number": 50,
-        "hexcode": "#ecfeff"
+        "hex": "#ecfeff"
     }, {
         "number": 100,
-        "hexcode": "#cffafe"
+        "hex": "#cffafe"
     }, {
         "number": 200,
-        "hexcode": "#a5f3fc"
+        "hex": "#a5f3fc"
     }, {
         "number": 300,
-        "hexcode": "#67e8f9"
+        "hex": "#67e8f9"
     }, {
         "number": 400,
-        "hexcode": "#22d3ee"
+        "hex": "#22d3ee"
     }, {
         "number": 500,
-        "hexcode": "#06b6d4"
+        "hex": "#06b6d4"
     }, {
         "number": 600,
-        "hexcode": "#0891b2"
+        "hex": "#0891b2"
     }, {
         "number": 700,
-        "hexcode": "#0e7490"
+        "hex": "#0e7490"
     }, {
         "number": 800,
-        "hexcode": "#155e75"
+        "hex": "#155e75"
     }, {
         "number": 900,
-        "hexcode": "#164e63"
+        "hex": "#164e63"
     }, {
         "number": 950,
-        "hexcode": "#083344"
+        "hex": "#083344"
     }]
 }, {
     "name": "Sky",
     "id": "sky",
     "shades": [{
         "number": 50,
-        "hexcode": "#f0f9ff"
+        "hex": "#f0f9ff"
     }, {
         "number": 100,
-        "hexcode": "#e0f2fe"
+        "hex": "#e0f2fe"
     }, {
         "number": 200,
-        "hexcode": "#bae6fd"
+        "hex": "#bae6fd"
     }, {
         "number": 300,
-        "hexcode": "#7dd3fc"
+        "hex": "#7dd3fc"
     }, {
         "number": 400,
-        "hexcode": "#38bdf8"
+        "hex": "#38bdf8"
     }, {
         "number": 500,
-        "hexcode": "#0ea5e9"
+        "hex": "#0ea5e9"
     }, {
         "number": 600,
-        "hexcode": "#0284c7"
+        "hex": "#0284c7"
     }, {
         "number": 700,
-        "hexcode": "#0369a1"
+        "hex": "#0369a1"
     }, {
         "number": 800,
-        "hexcode": "#075985"
+        "hex": "#075985"
     }, {
         "number": 900,
-        "hexcode": "#0c4a6e"
+        "hex": "#0c4a6e"
     }, {
         "number": 950,
-        "hexcode": "#082f49"
+        "hex": "#082f49"
     }]
 }, {
     "name": "Blue",
     "id": "blue",
     "shades": [{
         "number": 50,
-        "hexcode": "#eff6ff"
+        "hex": "#eff6ff"
     }, {
         "number": 100,
-        "hexcode": "#dbeafe"
+        "hex": "#dbeafe"
     }, {
         "number": 200,
-        "hexcode": "#bfdbfe"
+        "hex": "#bfdbfe"
     }, {
         "number": 300,
-        "hexcode": "#93c5fd"
+        "hex": "#93c5fd"
     }, {
         "number": 400,
-        "hexcode": "#60a5fa"
+        "hex": "#60a5fa"
     }, {
         "number": 500,
-        "hexcode": "#3b82f6"
+        "hex": "#3b82f6"
     }, {
         "number": 600,
-        "hexcode": "#2563eb"
+        "hex": "#2563eb"
     }, {
         "number": 700,
-        "hexcode": "#1d4ed8"
+        "hex": "#1d4ed8"
     }, {
         "number": 800,
-        "hexcode": "#1e40af"
+        "hex": "#1e40af"
     }, {
         "number": 900,
-        "hexcode": "#1e3a8a"
+        "hex": "#1e3a8a"
     }, {
         "number": 950,
-        "hexcode": "#172554"
+        "hex": "#172554"
     }]
 }, {
     "name": "Indigo",
     "id": "indigo",
     "shades": [{
         "number": 50,
-        "hexcode": "#eef2ff"
+        "hex": "#eef2ff"
     }, {
         "number": 100,
-        "hexcode": "#e0e7ff"
+        "hex": "#e0e7ff"
     }, {
         "number": 200,
-        "hexcode": "#c7d2fe"
+        "hex": "#c7d2fe"
     }, {
         "number": 300,
-        "hexcode": "#a5b4fc"
+        "hex": "#a5b4fc"
     }, {
         "number": 400,
-        "hexcode": "#818cf8"
+        "hex": "#818cf8"
     }, {
         "number": 500,
-        "hexcode": "#6366f1"
+        "hex": "#6366f1"
     }, {
         "number": 600,
-        "hexcode": "#4f46e5"
+        "hex": "#4f46e5"
     }, {
         "number": 700,
-        "hexcode": "#4338ca"
+        "hex": "#4338ca"
     }, {
         "number": 800,
-        "hexcode": "#3730a3"
+        "hex": "#3730a3"
     }, {
         "number": 900,
-        "hexcode": "#312e81"
+        "hex": "#312e81"
     }, {
         "number": 950,
-        "hexcode": "#1e1b4b"
+        "hex": "#1e1b4b"
     }]
 }, {
     "name": "Violet",
     "id": "violet",
     "shades": [{
         "number": 50,
-        "hexcode": "#f5f3ff"
+        "hex": "#f5f3ff"
     }, {
         "number": 100,
-        "hexcode": "#ede9fe"
+        "hex": "#ede9fe"
     }, {
         "number": 200,
-        "hexcode": "#ddd6fe"
+        "hex": "#ddd6fe"
     }, {
         "number": 300,
-        "hexcode": "#c4b5fd"
+        "hex": "#c4b5fd"
     }, {
         "number": 400,
-        "hexcode": "#a78bfa"
+        "hex": "#a78bfa"
     }, {
         "number": 500,
-        "hexcode": "#8b5cf6"
+        "hex": "#8b5cf6"
     }, {
         "number": 600,
-        "hexcode": "#7c3aed"
+        "hex": "#7c3aed"
     }, {
         "number": 700,
-        "hexcode": "#6d28d9"
+        "hex": "#6d28d9"
     }, {
         "number": 800,
-        "hexcode": "#5b21b6"
+        "hex": "#5b21b6"
     }, {
         "number": 900,
-        "hexcode": "#4c1d95"
+        "hex": "#4c1d95"
     }, {
         "number": 950,
-        "hexcode": "#2e1065"
+        "hex": "#2e1065"
     }]
 }, {
     "name": "Purple",
     "id": "purple",
     "shades": [{
         "number": 50,
-        "hexcode": "#faf5ff"
+        "hex": "#faf5ff"
     }, {
         "number": 100,
-        "hexcode": "#f3e8ff"
+        "hex": "#f3e8ff"
     }, {
         "number": 200,
-        "hexcode": "#e9d5ff"
+        "hex": "#e9d5ff"
     }, {
         "number": 300,
-        "hexcode": "#d8b4fe"
+        "hex": "#d8b4fe"
     }, {
         "number": 400,
-        "hexcode": "#c084fc"
+        "hex": "#c084fc"
     }, {
         "number": 500,
-        "hexcode": "#a855f7"
+        "hex": "#a855f7"
     }, {
         "number": 600,
-        "hexcode": "#9333ea"
+        "hex": "#9333ea"
     }, {
         "number": 700,
-        "hexcode": "#7e22ce"
+        "hex": "#7e22ce"
     }, {
         "number": 800,
-        "hexcode": "#6b21a8"
+        "hex": "#6b21a8"
     }, {
         "number": 900,
-        "hexcode": "#581c87"
+        "hex": "#581c87"
     }, {
         "number": 950,
-        "hexcode": "#3b0764"
+        "hex": "#3b0764"
     }]
 }, {
     "name": "Fuchsia",
     "id": "fuchsia",
     "shades": [{
         "number": 50,
-        "hexcode": "#fdf4ff"
+        "hex": "#fdf4ff"
     }, {
         "number": 100,
-        "hexcode": "#fae8ff"
+        "hex": "#fae8ff"
     }, {
         "number": 200,
-        "hexcode": "#f5d0fe"
+        "hex": "#f5d0fe"
     }, {
         "number": 300,
-        "hexcode": "#f0abfc"
+        "hex": "#f0abfc"
     }, {
         "number": 400,
-        "hexcode": "#e879f9"
+        "hex": "#e879f9"
     }, {
         "number": 500,
-        "hexcode": "#d946ef"
+        "hex": "#d946ef"
     }, {
         "number": 600,
-        "hexcode": "#c026d3"
+        "hex": "#c026d3"
     }, {
         "number": 700,
-        "hexcode": "#a21caf"
+        "hex": "#a21caf"
     }, {
         "number": 800,
-        "hexcode": "#86198f"
+        "hex": "#86198f"
     }, {
         "number": 900,
-        "hexcode": "#701a75"
+        "hex": "#701a75"
     }, {
         "number": 950,
-        "hexcode": "#4a044e"
+        "hex": "#4a044e"
     }]
 }, {
     "name": "Pink",
     "id": "pink",
     "shades": [{
         "number": 50,
-        "hexcode": "#fdf2f8"
+        "hex": "#fdf2f8"
     }, {
         "number": 100,
-        "hexcode": "#fce7f3"
+        "hex": "#fce7f3"
     }, {
         "number": 200,
-        "hexcode": "#fbcfe8"
+        "hex": "#fbcfe8"
     }, {
         "number": 300,
-        "hexcode": "#f9a8d4"
+        "hex": "#f9a8d4"
     }, {
         "number": 400,
-        "hexcode": "#f472b6"
+        "hex": "#f472b6"
     }, {
         "number": 500,
-        "hexcode": "#ec4899"
+        "hex": "#ec4899"
     }, {
         "number": 600,
-        "hexcode": "#db2777"
+        "hex": "#db2777"
     }, {
         "number": 700,
-        "hexcode": "#be185d"
+        "hex": "#be185d"
     }, {
         "number": 800,
-        "hexcode": "#9d174d"
+        "hex": "#9d174d"
     }, {
         "number": 900,
-        "hexcode": "#831843"
+        "hex": "#831843"
     }, {
         "number": 950,
-        "hexcode": "#500724"
+        "hex": "#500724"
     }]
 }, {
     "name": "Rose",
     "id": "rose",
     "shades": [{
         "number": 50,
-        "hexcode": "#fff1f2"
+        "hex": "#fff1f2"
     }, {
         "number": 100,
-        "hexcode": "#ffe4e6"
+        "hex": "#ffe4e6"
     }, {
         "number": 200,
-        "hexcode": "#fecdd3"
+        "hex": "#fecdd3"
     }, {
         "number": 300,
-        "hexcode": "#fda4af"
+        "hex": "#fda4af"
     }, {
         "number": 400,
-        "hexcode": "#fb7185"
+        "hex": "#fb7185"
     }, {
         "number": 500,
-        "hexcode": "#f43f5e"
+        "hex": "#f43f5e"
     }, {
         "number": 600,
-        "hexcode": "#e11d48"
+        "hex": "#e11d48"
     }, {
         "number": 700,
-        "hexcode": "#be123c"
+        "hex": "#be123c"
     }, {
         "number": 800,
-        "hexcode": "#9f1239"
+        "hex": "#9f1239"
     }, {
         "number": 900,
-        "hexcode": "#881337"
+        "hex": "#881337"
     }, {
         "number": 950,
-        "hexcode": "#4c0519"
+        "hex": "#4c0519"
     }]
 }]
