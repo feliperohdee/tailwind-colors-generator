@@ -3,6 +3,16 @@ const chroma = require('chroma-js');
 const contrast = require('./contrast');
 const referenceColorFamilies = require('./referenceColorFamilies.json');
 
+const fixHsl = hsl => {
+	return hsl.map(v => {
+		if (isNaN(v)) {
+			return 0;
+		}
+
+		return v;
+	});
+};
+
 const findClosestColor = targetColor => {
     let colors = referenceColorFamilies;
 
@@ -91,19 +101,22 @@ const generate = src => {
     const color = chroma(src);
 
 	const hex = color.hex();
+	const [h, s, l] = fixHsl(color.hsl());
 	const luminance = color.luminance();
+	const rgb = color.rgb();
 	
     const closestColor = findClosestColor(hex);
     const closestShade = chroma(closestColor.closestShadeLightness.hex);
-    const closestShadeHue = closestShade.get('hsl.h');
+    const [
+		closestShadeH,
+		closestShadeS
+	] = fixHsl(closestShade.hsl());
 	
-    const [hue] = color.hsl();
-    const saturationRatio = color.get('hsl.s') / closestShade.get('hsl.s');
-
-    let hueDiff = hue - (closestShadeHue || 0);
+    let hueDiff = h - (closestShadeH || 0);
+    let saturationRatio = s / closestShadeS;
 
     if (hueDiff === 0) {
-        hueDiff = closestShadeHue.toString();
+        hueDiff = closestShadeH.toString();
     } else if (hueDiff > 0) {
         hueDiff = '+' + hueDiff;
     } else {
@@ -112,31 +125,40 @@ const generate = src => {
 
 	const combination = hue => {
 		const newColor = color.set('hsl.h', hue);
+
 		const hex = newColor.hex();
+		const hsl = fixHsl(newColor.hsl());
 		const luminance = newColor.luminance();
+		const rgb = newColor.rgb();
 		const text = textColor(hex);
 
 		return {
 			hex,
+			hsl,
 			luminance,
+			rgb,
 			text
 		};
 	};
 
     return {
         combinations: {
-            analogous: analogous(hue).map(combination),
-            complementary: complementary(hue).map(combination),
-            split: split(hue).map(combination),
-            tetradic: tetradic(hue).map(combination),
-            triadic: triadic(hue).map(combination)
+            analogous: analogous(h).map(combination),
+            complementary: complementary(h).map(combination),
+            split: split(h).map(combination),
+            tetradic: tetradic(h).map(combination),
+            triadic: triadic(h).map(combination)
         },
         hex,
+		hsl: [h, s, l],
         luminance: color.luminance(),
+		rgb,
         shades: closestColor.shades.map(shade => {
 			const result = {
 				hex,
-				luminance
+				hsl: [h, s, l],
+				luminance,
+				rgb
 			};
 
 			if (closestColor.closestShadeLightness.number !== shade.number) {
@@ -152,10 +174,12 @@ const generate = src => {
 
             return {
                 hex: result.hex,
+                hsl: result.hsl,
                 luminance: result.luminance,
                 number: shade.number,
+                rgb: result.rgb,
                 self: closestColor.closestShadeLightness.number === shade.number,
-				text: textColor(result.hex)
+                text: textColor(result.hex)
             };
         }),
 		text: textColor(hex)
@@ -189,7 +213,7 @@ const hexByLuminance = (luminance, obj = {
     return shade ? shade.hex : '';
 };
 
-const textColor = (targetColor, lightColor = '#fff', darkColor = '#000') => {
+const textColor = (targetColor, lightColor = '#ffffff', darkColor = '#000000') => {
 	if (!(targetColor instanceof chroma)) {
 		targetColor = chroma(targetColor);
 	}
@@ -204,13 +228,25 @@ const textColor = (targetColor, lightColor = '#fff', darkColor = '#000') => {
 	
     const bgY = contrast.sRGBtoY(targetColor.rgb());
 
-    const darkTxtY = contrast.sRGBtoY(darkColor.rgb());
+	const darkRgb = darkColor.rgb();
+    const darkTxtY = contrast.sRGBtoY(darkRgb);
     const darkContrast = Math.abs(contrast.APCAcontrast(darkTxtY, bgY));
 
-    const lightTxtY = contrast.sRGBtoY(lightColor.rgb());
+	const lightRgb = lightColor.rgb();
+    const lightTxtY = contrast.sRGBtoY(lightRgb);
     const lightContrast = Math.abs(contrast.APCAcontrast(lightTxtY, bgY));
-
-    return darkContrast > lightContrast ? darkColor.hex() : lightColor.hex();
+	
+    return darkContrast > lightContrast ? {
+		hex: darkColor.hex(),
+		hsl: fixHsl(darkColor.hsl()),
+		rgb: darkRgb,
+		type: 'dark'
+	} : {
+		hex: lightColor.hex(),
+		hsl: fixHsl(lightColor.hsl()),
+		rgb: lightRgb,
+		type: 'light'
+	};
 };
 
 generate.closestColor = findClosestColor;
