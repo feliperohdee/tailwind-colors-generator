@@ -296,6 +296,17 @@ const expected = {
     console.log('✅ generate');
 })();
 
+// generate w/ combinations shades
+(() => {
+	const result = generate(hex, {
+		combinationsShades: true
+	});
+
+	assert.ok(Array.isArray(result.combinations.analogous[0].shades));
+
+    console.log('✅ generate w/ combinations shades');
+})();
+
 // closestColor
 (() => {
     const result = generate.closestColor(hex, expected);

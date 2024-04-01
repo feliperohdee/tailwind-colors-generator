@@ -97,23 +97,54 @@ const triadic = hue => {
     return harmonize(hue, 120, 240, 120);
 };
 
-const generate = src => {
-    const color = chroma(src);
+const combinations = (color, hue, opts = {
+	shades: false
+}) => {
+	if (!(color instanceof chroma)) {
+		color = chroma(color);
+	}
 
-	const hex = color.hex();
-	const [h, s, l] = fixHsl(color.hsl());
-	const luminance = color.luminance();
-	const rgb = color.rgb();
+	const combination = hue => {
+		const newColor = color.set('hsl.h', hue);
 	
-    const closestColor = findClosestColor(hex);
-    const closestShade = chroma(closestColor.closestShadeLightness.hex);
+		const hex = newColor.hex();
+		const hsl = fixHsl(newColor.hsl());
+		const luminance = newColor.luminance();
+		const rgb = newColor.rgb();
+		const text = textColor(hex);
+		const result = {
+			hex,
+			hsl,
+			luminance,
+			rgb,
+			text
+		};
+	
+		if (opts?.shades) {
+			result.shades = shades(hex, hsl, luminance, rgb);
+		}
+
+		return result;
+	};
+
+	return {
+		analogous: analogous(hue).map(combination),
+		complementary: complementary(hue).map(combination),
+		split: split(hue).map(combination),
+		tetradic: tetradic(hue).map(combination),
+		triadic: triadic(hue).map(combination)
+	};
+};
+
+const shades = (hex, hsl, luminance, rgb) => {
+	const closestColor = findClosestColor(hex);
     const [
 		closestShadeH,
 		closestShadeS
-	] = fixHsl(closestShade.hsl());
+	] = fixHsl(chroma(closestColor.closestShadeLightness.hex).hsl());
 	
-    let hueDiff = h - (closestShadeH || 0);
-    let saturationRatio = s / closestShadeS;
+    let hueDiff = hsl[0] - (closestShadeH || 0);
+    let saturationRatio = hsl[1] / closestShadeS;
 
     if (hueDiff === 0) {
         hueDiff = closestShadeH.toString();
@@ -123,65 +154,61 @@ const generate = src => {
         hueDiff = hueDiff.toString();
     }
 
-	const combination = hue => {
-		const newColor = color.set('hsl.h', hue);
-
-		const hex = newColor.hex();
-		const hsl = fixHsl(newColor.hsl());
-		const luminance = newColor.luminance();
-		const rgb = newColor.rgb();
-		const text = textColor(hex);
-
-		return {
+	return closestColor.shades.map(shade => {
+		const result = {
 			hex,
 			hsl,
 			luminance,
-			rgb,
-			text
+			rgb
 		};
-	};
+
+		if (closestColor.closestShadeLightness.number !== shade.number) {
+			let shadeColor = chroma(shade.hex);
+			let shadeSaturation = shadeColor.get('hsl.s') * saturationRatio;
+
+			shadeColor = shadeColor.set('hsl.s', shadeSaturation);
+			shadeColor = shadeColor.set('hsl.h', hueDiff);
+
+			result.hex = shadeColor.hex();
+			result.luminance = shadeColor.luminance();
+		}
+
+		return {
+			hex: result.hex,
+			hsl: result.hsl,
+			luminance: result.luminance,
+			number: shade.number,
+			rgb: result.rgb,
+			self: closestColor.closestShadeLightness.number === shade.number,
+			text: textColor(result.hex)
+		};
+	});
+};
+
+const generate = (src, opts = {
+	combinationsShades: false
+}) => {
+    const color = chroma(src);
+
+	const hex = color.hex();
+	const [h, s, l] = fixHsl(color.hsl());
+	const luminance = color.luminance();
+	const rgb = color.rgb();
 
     return {
-        combinations: {
-            analogous: analogous(h).map(combination),
-            complementary: complementary(h).map(combination),
-            split: split(h).map(combination),
-            tetradic: tetradic(h).map(combination),
-            triadic: triadic(h).map(combination)
-        },
+        combinations: combinations(color, h, {
+			shades: opts.combinationsShades
+		}),
         hex,
 		hsl: [h, s, l],
         luminance: color.luminance(),
 		rgb,
-        shades: closestColor.shades.map(shade => {
-			const result = {
-				hex,
-				hsl: [h, s, l],
-				luminance,
-				rgb
-			};
-
-			if (closestColor.closestShadeLightness.number !== shade.number) {
-                let shadeColor = chroma(shade.hex);
-                let shadeSaturation = shadeColor.get('hsl.s') * saturationRatio;
-
-                shadeColor = shadeColor.set('hsl.s', shadeSaturation);
-                shadeColor = shadeColor.set('hsl.h', hueDiff);
-
-                result.hex = shadeColor.hex();
-                result.luminance = shadeColor.luminance();
-            }
-
-            return {
-                hex: result.hex,
-                hsl: result.hsl,
-                luminance: result.luminance,
-                number: shade.number,
-                rgb: result.rgb,
-                self: closestColor.closestShadeLightness.number === shade.number,
-                text: textColor(result.hex)
-            };
-        }),
+        shades: shades(
+			hex,
+			[h, s, l],
+			luminance,
+			rgb
+		),
 		text: textColor(hex)
     };
 };

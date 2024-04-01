@@ -22,8 +22,8 @@ Here's a sample usage:
 const assert = require('assert');
 const generate = require('./');
 
-let shades = generate('#d7006c');
-console.log(shades);
+let result = generate('#d7006c');
+console.log(result);
 ```
 
 In this example, the `generate` function is used with '#d7006c' as input. The function returns the following output:
@@ -141,7 +141,3 @@ In this example, the `generate` function is used with '#d7006c' as input. The fu
 }
 ```
 
-It's an array of objects. Each object represents a shade of the color '#d7006c'. The `self` key is `true` only for the original input color shade.
-
-## Note
-The `assert` library is just used for verification in code testing. It's not part of the function's functionality itself.
