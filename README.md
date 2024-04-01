@@ -1,18 +1,4 @@
-# Color Generator Module
-
-This README file explains how to use the `generate` function from our module.
-
-## Description
-
-The `generate` function is a color generator. The input of the function is a hex color code. It generates a color gradient based on the input hex color code and returns an array which contains various shades of the input color.
-
-## Key Features
-
-- The generated array includes lighter and darker shades of the input color.
-- Each object in the returned array consists of three properties: 
-  - `hex`: Color's hexadecimal representation
-  - `number`: Number that represents the intensity/brightness of shade 
-  - `self`: A boolean indicating if the color is the original passed color (`true`) or not (`false`).
+# Tailwind Color Generator
 
 ## How to Use
 
