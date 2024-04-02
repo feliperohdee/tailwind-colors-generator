@@ -205,6 +205,7 @@ const generate = (src, opts = {
         hex,
 		hsl: [h, s, l],
         luminance: color.luminance(),
+		number: closestColor.closestShadeLightness.number,
 		rgb,
         shades: shades(closestColor, hex, [h, s, l], luminance, rgb),
 		text: textColor(hex)

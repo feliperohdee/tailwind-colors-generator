@@ -139,6 +139,7 @@ const expected = {
     hex: '#d7006c',
     hsl: [329.8604651162791, 1, 0.4215686274509804],
     luminance: 0.1552978258683217,
+	number: 700,
     rgb: [215, 0, 108],
     shades: [{
         hex: '#fff0f9',
