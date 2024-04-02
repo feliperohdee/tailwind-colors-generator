@@ -118,6 +118,7 @@ const combinations = (color, hue, opts = {
 			hex,
 			hsl,
 			luminance,
+			number: closestColor.closestShadeLightness.number,
 			rgb,
 			text
 		};

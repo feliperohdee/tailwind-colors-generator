@@ -36,6 +36,7 @@ declare module 'tailwind-colors-generator' {
 		hex: string;
 		hsl: number[];
 		luminance: number;
+		number: number;
 		rgb: number[];
 		shades: Shade[];
 		text: TextColor;

@@ -15,6 +15,7 @@ const expected = {
             hex: '#d700d7',
             hsl: [300, 1, 0.4215686274509804, 1],
             luminance: 0.1935336953515051,
+			number: 700,
             rgb: [215, 0, 215],
             text: {
                 hex: '#ffffff',
@@ -27,6 +28,7 @@ const expected = {
             hex: '#d70000',
             hsl: [0, 1, 0.4215686274509804, 1],
             luminance: 0.14447072904399574,
+			number: 700,
             rgb: [215, 0, 0],
             text: {
                 hex: '#ffffff',
@@ -40,6 +42,7 @@ const expected = {
             hex: '#00d76b',
             hsl: [149.86046511627907, 1, 0.4215686274509804, 1],
             luminance: 0.496624142922715,
+			number: 500,
             rgb: [0, 215, 107],
             text: {
                 hex: '#000000',
@@ -53,6 +56,7 @@ const expected = {
             hex: '#00d700',
             hsl: [120, 1, 0.4215686274509804, 1],
             luminance: 0.4860087742815887,
+			number: 500,
             rgb: [0, 215, 0],
             text: {
                 hex: '#000000',
@@ -65,6 +69,7 @@ const expected = {
             hex: '#00d7d7',
             hsl: [180, 1, 0.4215686274509804, 1],
             luminance: 0.535071740589098,
+			number: 500,
             rgb: [0, 215, 215],
             text: {
                 hex: '#000000',
@@ -78,6 +83,7 @@ const expected = {
             hex: '#d7d700',
             hsl: [60, 1, 0.4215686274509804, 1],
             luminance: 0.6304795033255844,
+			number: 600,
             rgb: [215, 215, 0],
             text: {
                 hex: '#000000',
@@ -90,6 +96,7 @@ const expected = {
             hex: '#00d76b',
             hsl: [149.86046511627907, 1, 0.4215686274509804, 1],
             luminance: 0.496624142922715,
+			number: 500,
             rgb: [0, 215, 107],
             text: {
                 hex: '#000000',
@@ -102,6 +109,7 @@ const expected = {
             hex: '#0000d7',
             hsl: [240, 1, 0.4215686274509804, 1],
             luminance: 0.04906296630750938,
+			number: 800,
             rgb: [0, 0, 215],
             text: {
                 hex: '#ffffff',
@@ -115,6 +123,7 @@ const expected = {
             hex: '#6cd700',
             hsl: [89.86046511627907, 1, 0.4215686274509804, 1],
             luminance: 0.517890225595324,
+			number: 500,
             rgb: [108, 215, 0],
             text: {
                 hex: '#000000',
@@ -127,6 +136,7 @@ const expected = {
             hex: '#006cd7',
             hsl: [209.86046511627907, 1, 0.4215686274509804, 1],
             luminance: 0.15631420798005663,
+			number: 800,
             rgb: [0, 108, 215],
             text: {
                 hex: '#ffffff',
