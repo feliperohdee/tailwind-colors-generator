@@ -72,6 +72,7 @@ declare module 'tailwind-colors-generator' {
 			shades: Shade[];
 		}) => string;
 		textColor: (targetColor: any, lightColor?: string, darkColor?: string) => TextColor;
+		validColor: (value: string) => boolean;
 	}
 
 	const generate: Generate;

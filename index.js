@@ -276,9 +276,14 @@ const textColor = (targetColor, lightColor = '#ffffff', darkColor = '#000000') =
 	};
 };
 
+const validColor = value => {
+	return chroma.valid(value);
+};
+
 generate.closestColor = findClosestColor;
 generate.hexByNumber = hexByNumber;
 generate.hexByLuminance = hexByLuminance;
 generate.textColor = textColor;
+generate.validColor = validColor;
 
 module.exports = generate;
