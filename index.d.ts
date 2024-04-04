@@ -61,7 +61,7 @@ declare module 'tailwind-colors-generator' {
     }
 
 	interface Generate {
-		(src: any, opts: {
+		(src: any, opts?: {
 			combinationsShades: boolean
 		}): GenerateResponse;
 		closestColor: (hex: string) => ClosestColor;
