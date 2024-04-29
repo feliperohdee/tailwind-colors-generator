@@ -171,6 +171,7 @@ const shades = (closestColor, hex, hsl, luminance, rgb) => {
 			shadeColor = shadeColor.set('hsl.s', shadeSaturation);
 			shadeColor = shadeColor.set('hsl.h', hueDiff);
 
+			result.rgb = shadeColor.rgb();
 			result.hex = shadeColor.hex();
 			result.luminance = shadeColor.luminance();
 		}

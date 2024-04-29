@@ -8,239 +8,239 @@ const hex = '#d7006c';
 const rgb = 'rgb(215, 0, 108)';
 const hsl = 'hsl(329.86, 100%, 42.16%)';
 const expected = {
-	closest: 'pink',
+    closest: 'pink',
     combinations: {
         analogous: [{
-			closest: 'fuchsia',
+            closest: 'fuchsia',
             hex: '#d700d7',
             hsl: [300, 1, 0.4215686274509804, 1],
             luminance: 0.1935336953515051,
-			number: 700,
+            number: 700,
             rgb: [215, 0, 215],
             text: {
                 hex: '#ffffff',
-				hsl: [0, 0, 1, 1],
+                hsl: [0, 0, 1, 1],
                 rgb: [255, 255, 255],
-				type: 'light'
+                type: 'light'
             }
         }, {
-			closest: 'red',
+            closest: 'red',
             hex: '#d70000',
             hsl: [0, 1, 0.4215686274509804, 1],
             luminance: 0.14447072904399574,
-			number: 700,
+            number: 700,
             rgb: [215, 0, 0],
             text: {
                 hex: '#ffffff',
-				hsl: [0, 0, 1, 1],
+                hsl: [0, 0, 1, 1],
                 rgb: [255, 255, 255],
-				type: 'light'
+                type: 'light'
             }
         }],
         complementary: [{
-			closest: 'green',
+            closest: 'green',
             hex: '#00d76b',
             hsl: [149.86046511627907, 1, 0.4215686274509804, 1],
             luminance: 0.496624142922715,
-			number: 500,
+            number: 500,
             rgb: [0, 215, 107],
             text: {
                 hex: '#000000',
-				hsl: [0, 0, 0, 1],
+                hsl: [0, 0, 0, 1],
                 rgb: [0, 0, 0],
-				type: 'dark'
+                type: 'dark'
             }
         }],
         split: [{
-			closest: 'lime',
+            closest: 'lime',
             hex: '#00d700',
             hsl: [120, 1, 0.4215686274509804, 1],
             luminance: 0.4860087742815887,
-			number: 500,
+            number: 500,
             rgb: [0, 215, 0],
             text: {
                 hex: '#000000',
-				hsl: [0, 0, 0, 1],
+                hsl: [0, 0, 0, 1],
                 rgb: [0, 0, 0],
-				type: 'dark'
+                type: 'dark'
             }
         }, {
-			closest: 'teal',
+            closest: 'teal',
             hex: '#00d7d7',
             hsl: [180, 1, 0.4215686274509804, 1],
             luminance: 0.535071740589098,
-			number: 500,
+            number: 500,
             rgb: [0, 215, 215],
             text: {
                 hex: '#000000',
-				hsl: [0, 0, 0, 1],
+                hsl: [0, 0, 0, 1],
                 rgb: [0, 0, 0],
-				type: 'dark'
+                type: 'dark'
             }
         }],
         tetradic: [{
-			closest: 'yellow',
+            closest: 'yellow',
             hex: '#d7d700',
             hsl: [60, 1, 0.4215686274509804, 1],
             luminance: 0.6304795033255844,
-			number: 600,
+            number: 600,
             rgb: [215, 215, 0],
             text: {
                 hex: '#000000',
-				hsl: [0, 0, 0, 1],
+                hsl: [0, 0, 0, 1],
                 rgb: [0, 0, 0],
-				type: 'dark'
+                type: 'dark'
             }
         }, {
-			closest: 'green',
+            closest: 'green',
             hex: '#00d76b',
             hsl: [149.86046511627907, 1, 0.4215686274509804, 1],
             luminance: 0.496624142922715,
-			number: 500,
+            number: 500,
             rgb: [0, 215, 107],
             text: {
                 hex: '#000000',
-				hsl: [0, 0, 0, 1],
+                hsl: [0, 0, 0, 1],
                 rgb: [0, 0, 0],
-				type: 'dark'
+                type: 'dark'
             }
         }, {
-			closest: 'violet',
+            closest: 'violet',
             hex: '#0000d7',
             hsl: [240, 1, 0.4215686274509804, 1],
             luminance: 0.04906296630750938,
-			number: 800,
+            number: 800,
             rgb: [0, 0, 215],
             text: {
                 hex: '#ffffff',
-				hsl: [0, 0, 1, 1],
+                hsl: [0, 0, 1, 1],
                 rgb: [255, 255, 255],
-				type: 'light'
+                type: 'light'
             }
         }],
         triadic: [{
-			closest: 'lime',
+            closest: 'lime',
             hex: '#6cd700',
             hsl: [89.86046511627907, 1, 0.4215686274509804, 1],
             luminance: 0.517890225595324,
-			number: 500,
+            number: 500,
             rgb: [108, 215, 0],
             text: {
                 hex: '#000000',
-				hsl: [0, 0, 0, 1],
+                hsl: [0, 0, 0, 1],
                 rgb: [0, 0, 0],
-				type: 'dark'
+                type: 'dark'
             }
         }, {
-			closest: 'blue',
+            closest: 'blue',
             hex: '#006cd7',
             hsl: [209.86046511627907, 1, 0.4215686274509804, 1],
             luminance: 0.15631420798005663,
-			number: 800,
+            number: 800,
             rgb: [0, 108, 215],
             text: {
                 hex: '#ffffff',
-				hsl: [0, 0, 1, 1],
+                hsl: [0, 0, 1, 1],
                 rgb: [255, 255, 255],
-				type: 'light'
+                type: 'light'
             }
         }]
     },
     hex: '#d7006c',
     hsl: [329.8604651162791, 1, 0.4215686274509804],
     luminance: 0.1552978258683217,
-	number: 700,
+    number: 700,
     rgb: [215, 0, 108],
     shades: [{
         hex: '#fff0f9',
         hsl: [329.8604651162791, 1, 0.4215686274509804],
         luminance: 0.9041972956031168,
         number: 50,
-        rgb: [215, 0, 108],
+        rgb: [255, 240, 249],
         self: false,
         text: {
             hex: '#000000',
-			hsl: [0, 0, 0, 1],
+            hsl: [0, 0, 0, 1],
             rgb: [0, 0, 0],
-			type: 'dark'
+            type: 'dark'
         }
     }, {
         hex: '#ffe4f5',
         hsl: [329.8604651162791, 1, 0.4215686274509804],
         luminance: 0.8333937732001061,
         number: 100,
-        rgb: [215, 0, 108],
+        rgb: [255, 228, 245],
         self: false,
         text: {
             hex: '#000000',
-			hsl: [0, 0, 0, 1],
+            hsl: [0, 0, 0, 1],
             rgb: [0, 0, 0],
-			type: 'dark'
+            type: 'dark'
         }
     }, {
         hex: '#ffc9ee',
         hsl: [329.8604651162791, 1, 0.4215686274509804],
         luminance: 0.6920633507823302,
         number: 200,
-        rgb: [215, 0, 108],
+        rgb: [255, 201, 238],
         self: false,
         text: {
             hex: '#000000',
-			hsl: [0, 0, 0, 1],
+            hsl: [0, 0, 0, 1],
             rgb: [0, 0, 0],
-			type: 'dark'
+            type: 'dark'
         }
     }, {
         hex: '#ff9cde',
         hsl: [329.8604651162791, 1, 0.4215686274509804],
         luminance: 0.503108604229311,
         number: 300,
-        rgb: [215, 0, 108],
+        rgb: [255, 156, 222],
         self: false,
         text: {
             hex: '#000000',
-			hsl: [0, 0, 0, 1],
+            hsl: [0, 0, 0, 1],
             rgb: [0, 0, 0],
-			type: 'dark'
+            type: 'dark'
         }
     }, {
         hex: '#ff5fc5',
         hsl: [329.8604651162791, 1, 0.4215686274509804],
         luminance: 0.33475635549264576,
         number: 400,
-        rgb: [215, 0, 108],
+        rgb: [255, 95, 197],
         self: false,
         text: {
             hex: '#ffffff',
-			hsl: [0, 0, 1, 1],
+            hsl: [0, 0, 1, 1],
             rgb: [255, 255, 255],
-			type: 'light'
+            type: 'light'
         }
     }, {
         hex: '#ff30ab',
         hsl: [329.8604651162791, 1, 0.4215686274509804],
         luminance: 0.26314179128922627,
         number: 500,
-        rgb: [215, 0, 108],
+        rgb: [255, 48, 171],
         self: false,
         text: {
             hex: '#ffffff',
-			hsl: [0, 0, 1, 1],
+            hsl: [0, 0, 1, 1],
             rgb: [255, 255, 255],
-			type: 'light'
+            type: 'light'
         }
     }, {
         hex: '#f50d88',
         hsl: [329.8604651162791, 1, 0.4215686274509804],
         luminance: 0.2147789867712152,
         number: 600,
-        rgb: [215, 0, 108],
+        rgb: [245, 13, 136],
         self: false,
         text: {
             hex: '#ffffff',
-			hsl: [0, 0, 1, 1],
+            hsl: [0, 0, 1, 1],
             rgb: [255, 255, 255],
-			type: 'light'
+            type: 'light'
         }
     }, {
         hex: '#d7006c',
@@ -251,55 +251,55 @@ const expected = {
         self: true,
         text: {
             hex: '#ffffff',
-			hsl: [0, 0, 1, 1],
+            hsl: [0, 0, 1, 1],
             rgb: [255, 255, 255],
-			type: 'light'
+            type: 'light'
         }
     }, {
         hex: '#b00458',
         hsl: [329.8604651162791, 1, 0.4215686274509804],
         luminance: 0.1002151995089306,
         number: 800,
-        rgb: [215, 0, 108],
+        rgb: [176, 4, 88],
         self: false,
         text: {
             hex: '#ffffff',
-			hsl: [0, 0, 1, 1],
+            hsl: [0, 0, 1, 1],
             rgb: [255, 255, 255],
-			type: 'light'
+            type: 'light'
         }
     }, {
         hex: '#92094c',
         hsl: [329.8604651162791, 1, 0.4215686274509804],
         luminance: 0.06828169220771314,
         number: 900,
-        rgb: [215, 0, 108],
+        rgb: [146, 9, 76],
         self: false,
         text: {
             hex: '#ffffff',
-			hsl: [0, 0, 1, 1],
+            hsl: [0, 0, 1, 1],
             rgb: [255, 255, 255],
-			type: 'light'
+            type: 'light'
         }
     }, {
         hex: '#5b002a',
         hsl: [329.8604651162791, 1, 0.4215686274509804],
         luminance: 0.023913137555828322,
         number: 950,
-        rgb: [215, 0, 108],
+        rgb: [91, 0, 42],
         self: false,
         text: {
             hex: '#ffffff',
-			hsl: [0, 0, 1, 1],
+            hsl: [0, 0, 1, 1],
             rgb: [255, 255, 255],
-			type: 'light'
+            type: 'light'
         }
     }],
     text: {
         hex: '#ffffff',
-		hsl: [0, 0, 1, 1],
+        hsl: [0, 0, 1, 1],
         rgb: [255, 255, 255],
-		type: 'light'
+        type: 'light'
     }
 };
 
