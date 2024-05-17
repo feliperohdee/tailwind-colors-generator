@@ -136,15 +136,15 @@ const shades = (closestColor, hex, hsl, luminance, rgb) => {
         closestShadeS
     ] = fixHsl(chroma(closestColor.closestShade.hex).hsl());
 
-    let hueDiff = hsl[0] - (closestShadeH || 0);
+    let hueDelta = hsl[0] - (closestShadeH || 0);
     let saturationRatio = hsl[1] / closestShadeS;
 
-    if (hueDiff === 0) {
-        hueDiff = closestShadeH.toString();
-    } else if (hueDiff > 0) {
-        hueDiff = '+' + hueDiff;
+    if (hueDelta === 0) {
+        hueDelta = closestShadeH.toString();
+    } else if (hueDelta > 0) {
+        hueDelta = '+' + hueDelta;
     } else {
-        hueDiff = hueDiff.toString();
+        hueDelta = hueDelta.toString();
     }
 
     return closestColor.shades.map(shade => {
@@ -160,7 +160,7 @@ const shades = (closestColor, hex, hsl, luminance, rgb) => {
             let shadeSaturation = shadeColor.get('hsl.s') * saturationRatio;
 
             shadeColor = shadeColor.set('hsl.s', shadeSaturation);
-            shadeColor = shadeColor.set('hsl.h', hueDiff);
+            shadeColor = shadeColor.set('hsl.h', hueDelta);
 
             result.rgb = shadeColor.rgb();
             result.hex = shadeColor.hex();
