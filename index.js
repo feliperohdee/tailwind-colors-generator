@@ -24,14 +24,14 @@ const findClosestColor = hex => {
         );
     };
 
-    const closestColor = referenceColorFamilies.flatMap(color => {
+    const closestColor = referenceColorFamilies.flatMap(referenceColor => {
             // calculate the distance between the target color and each shade of the current color
-            return color.shades.map(shade => {
+            return referenceColor.shades.map(referenceShade => {
                 return {
-                    ...color,
+                    ...referenceColor,
                     closestShade: {
-                        ...shade,
-                        colorDelta: calculateColorDelta(shade.hex)
+                        ...referenceShade,
+                        colorDelta: calculateColorDelta(referenceShade.hex)
                     }
                 };
             });
@@ -42,13 +42,13 @@ const findClosestColor = hex => {
         });
 
     // calculate the lightness delta between the target color and the closest shade
-    closestColor.closestShade = closestColor.shades.map(shade => {
+    closestColor.closestShade = closestColor.shades.map(closestShade => {
             return {
-                ...shade,
-                lightnessDelta: calculateLightnessDelta(shade.hex)
+                ...closestShade,
+                lightnessDelta: calculateLightnessDelta(closestShade.hex)
             };
         })
-		// find the closest shade based on lightness delta
+        // find the closest shade based on lightness delta
         .reduce((prev, current) => {
             return prev.lightnessDelta < current.lightnessDelta ? prev : current;
         });
@@ -170,7 +170,7 @@ const shades = (closestColor, hex, hsl, luminance, rgb) => {
 
         return {
             hex: result.hex,
-            hsl: result.hsl,
+            hsl: fixHsl(result.hsl),
             luminance: result.luminance,
             number: shade.number,
             rgb: result.rgb,
