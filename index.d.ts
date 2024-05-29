@@ -1,5 +1,5 @@
 declare module 'tailwind-colors-generator' {
-	interface ClosestColor {
+	export interface ClosestColor {
 		closestShadeLightness: {
 			number: number;
 			hex: string;
@@ -14,7 +14,7 @@ declare module 'tailwind-colors-generator' {
 		}[];
 	}
 
-    interface Shade {
+    export interface Shade {
         hex: string;
         hsl: number[];
         luminance: number;
@@ -24,14 +24,14 @@ declare module 'tailwind-colors-generator' {
         text: TextColor;
     }
 
-    interface TextColor {
+    export interface TextColor {
         hex: string;
         hsl: number[];
         rgb: number[];
         type: string;
     }
 
-	interface Combination {
+	export interface Combination {
 		closest: string;
 		hex: string;
 		hsl: number[];
@@ -42,7 +42,7 @@ declare module 'tailwind-colors-generator' {
 		text: TextColor;
 	}
 
-	interface GenerateResponse {
+	export interface GenerateResponse {
         closest: string;
 		combinations: {
 			analogous: Combination[];
@@ -60,7 +60,7 @@ declare module 'tailwind-colors-generator' {
         shades: Shade[];
     }
 
-	interface Generate {
+	export interface Generate {
 		(src: any, opts?: {
 			combinationsShades: boolean
 		}): GenerateResponse;
@@ -77,5 +77,5 @@ declare module 'tailwind-colors-generator' {
 
 	const generate: Generate;
 
-    export = generate;
+    export default generate;
 }
