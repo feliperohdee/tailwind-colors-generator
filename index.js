@@ -97,7 +97,7 @@ const combinations = (color, hue, opts = {
 
     const combination = hue => {
         const newColor = color.set('hsl.h', hue);
-        const hex = newColor.hex();
+        const hex = newColor.hex('rgb');
         const hsl = fixHsl(newColor.hsl());
         const luminance = newColor.luminance();
         const rgb = newColor.rgb();
@@ -185,7 +185,7 @@ const generate = (src, opts = {
 }) => {
     const color = chroma(src);
 
-    const hex = color.hex();
+    const hex = color.hex('rgb');
     const [h, s, l] = fixHsl(color.hsl());
     const luminance = color.luminance();
     const rgb = color.rgb();
@@ -257,12 +257,12 @@ const textColor = (targetColor, lightColor = '#ffffff', darkColor = '#000000') =
     const lightContrast = Math.abs(contrast.APCAcontrast(lightTxtY, bgY));
 
     return darkContrast > lightContrast ? {
-        hex: darkColor.hex(),
+        hex: darkColor.hex('rgb'),
         hsl: fixHsl(darkColor.hsl()),
         rgb: darkRgb,
         type: 'dark'
     } : {
-        hex: lightColor.hex(),
+        hex: lightColor.hex('rgb'),
         hsl: fixHsl(lightColor.hsl()),
         rgb: lightRgb,
         type: 'light'
