@@ -1,4 +1,4 @@
-declare module 'tailwind-colors-generator' {
+declare module '@simpleimg/tailwind-colors-generator' {
 	export interface ClosestColor {
 		closestShadeLightness: {
 			number: number;
