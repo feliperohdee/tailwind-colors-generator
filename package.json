@@ -1,6 +1,6 @@
 {
-    "name": "@simpleimg/tailwind-colors-generator",
-    "version": "1.0.16",
+    "name": "@feliperohdee/tailwind-colors-generator",
+    "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
     "scripts": {
